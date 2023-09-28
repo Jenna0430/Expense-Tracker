@@ -7,6 +7,7 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
   
+  
 
  function inputChangeHandler(identifier, value){
   if(identifier === 'title'){
@@ -32,7 +33,7 @@ const ExpenseForm = (props) => {
    setEnteredDate('');
    setEnteredTitle('');
  };
-
+ 
   return (
    <div className="expense-form">
     <form onSubmit={submitHandler}>
@@ -60,6 +61,9 @@ const ExpenseForm = (props) => {
          </div>
 
        </div>
+       <div className="flex">
+          <button type='submit' onClick={props.cancel}>Cancel</button>
+        </div>
         <div className="new-expense__actions">
           <button type='submit'>Add Expense</button>
         </div>
@@ -67,6 +71,7 @@ const ExpenseForm = (props) => {
     </form>
    </div>
   )
+      
 }
 
 export default ExpenseForm

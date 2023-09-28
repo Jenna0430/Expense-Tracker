@@ -24,3 +24,12 @@
 .new-expense__actions {
   text-align: right;
 }
+.flex{
+  position: relative;
+  left: 150px;
+  top: 55px;
+}
+.add_new_expense{
+  width: 200px;
+  height: 200px;
+}
